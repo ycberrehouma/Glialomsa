@@ -1,0 +1,385 @@
+{% extends 'uibase.html.twig' %}
+{% block body %}
+
+<table id="myTable" class="display">
+  <h2 class="page-header">Latest Todos</h2>
+  <thead>
+  <tr>
+    <th>#</th>
+    <th>Todo</th>
+    <th>Due Date</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <th scope="row">{{todo.id}}</th>
+      <td>{{ todo.name }}</td>
+      <td>{{ todo.due_date|date('F j, Y, g:i a')}}</td>
+      <td><a href="/todos/details/{{ todo.id }}" class="btn btn-success">View</a>
+        <a href="/todos/edit/{{ todo.id }}" class="btn btn-default">Edit</a>
+        <a href="/todos/delete/{{ todo.id }}" class="btn btn-danger">Done</a></td>
+    </tr>
+
+  </tbody>
+</table>
+
+<div class="content-wrapper">
+  <div class="container-fluid">
+
+    <!-- Main Content -->
+    <!-- Page Content -->
+    <div class="container">
+      <div class="row">
+
+        <!-- Blog Entries Column -->
+        <div class="col-md-8">
+          <!-- Blog Post -->
+          <div class="card mb-4">
+            <img class="card-img-top" src="{{ asset('main/img/sport.jpg') }}" alt="Card image cap">
+            <div class="card-body">
+              <h2 class="card-title">Post Title</h2>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
+              <a href="/solo/web/app_dev.php/rowing" class="btn btn-primary">Read More &rarr;</a>
+            </div>
+            <div class="card-footer text-muted">
+              Posted on January 1, 2017
+            </div>
+          </div>
+
+
+
+          <!-- Blog Post -->
+
+
+          <div class="card mb-6" >
+            <img class="card-img-top" src="{{ asset('main/img/bitcoin.jpg') }}" alt="Card image cap">
+            <div class="card-body">
+              <h2 class="card-title">Post Title</h2>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
+              <a href="/solo/web/app_dev.php/article" class="btn btn-primary">Read More &rarr;</a>
+            </div>
+            <div class="card-footer text-muted">
+              Posted on January 1, 2017
+            </div>
+          </div>
+
+          <!-- Blog Post -->
+          <div class="card mb-4">
+            <img class="card-img-top" src="{{ asset('main/img/lifestyle.jpg') }}" alt="Card image cap">
+            <div class="card-body">
+              <h2 class="card-title">Post Title</h2>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
+              <a href="#" class="btn btn-primary">Read More &rarr;</a>
+            </div>
+            <div class="card-footer text-muted">
+              Posted on January 1, 2017
+            </div>
+          </div>
+
+          <!-- Blog Post -->
+          <div class="card mb-4">
+            <img class="card-img-top" src="{{ asset('main/img/sport.jpg') }}" alt="Card image cap">
+            <div class="card-body">
+              <h2 class="card-title">Post Title</h2>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
+              <a href="/solo/web/app_dev.php/article" class="btn btn-primary">Read More &rarr;</a>
+            </div>
+            <div class="card-footer text-muted">
+              Posted on January 1, 2017
+            </div>
+          </div>
+
+          <!-- Blog Post -->
+          <div class="card mb-6">
+            <img class="card-img-top" src="{{ asset('main/img/bitcoin.jpg') }}" alt="Card image cap">
+            <div class="card-body">
+              <h2 class="card-title">Post Title</h2>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
+              <a href="/solo/web/app_dev.php/article" class="btn btn-primary">Read More &rarr;</a>
+            </div>
+            <div class="card-footer text-muted">
+              Posted on January 1, 2017
+            </div>
+          </div>
+
+          <!-- Blog Post -->
+          <div class="card mb-4">
+
+            <img class="card-img-top" src="{{ asset('main/img/lifestyle.jpg') }}" alt="Card image cap">
+            <div class="card-body">
+              <h2 class="card-title">Post Title</h2>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
+              <a href="#" class="btn btn-primary">Read More &rarr;</a>
+            </div>
+            <div class="card-footer text-muted">
+              Posted on January 1, 2017
+            </div>
+          </div>
+
+
+          <!-- Bottom posts-->
+          <div class="card-deck">
+            <div class="wrapper" id="bottom-card-1">
+            <div class="card mb-4">
+              <div class="card__image border-tlr-radius">
+                <img src="http://lorempixel.com/400/200/sports/" alt="image" class="border-tlr-radius">
+              </div>
+
+              <div class="card__content card__padding">
+                <div class="card__share">
+                  <div class="card__social">
+                    <a class="share-icon facebook" href="#"><span class="fa fa-facebook"></span></a>
+                    <a class="share-icon twitter" href="#"><span class="fa fa-twitter"></span></a>
+                    <a class="share-icon googleplus" href="#"><span class="fa fa-google-plus"></span></a>
+                  </div>
+
+                  <a id="share" class="share-toggle share-icon" href="#"></a>
+                </div>
+
+                <div class="card__meta">
+                  <a href="#">Web Design</a>
+                  <time>17th March</time>
+                </div>
+
+                <article class="card__article">
+                  <h4><a href="#">Material Design Card - For Blog Post Article</a></h4>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum...</p>
+                </article>
+              </div>
+            </div>
+
+              <div class="card__action">
+
+                <div class="card__author">
+                  <img src="http://lorempixel.com/40/40/sports/" alt="user">
+                  <div class="card__author-content">
+                    By <a href="#">John Doe</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="card radius shadowDepth1">
+              <div class="card__image border-tlr-radius">
+                <img src="http://lorempixel.com/400/200/sports/" alt="image" class="border-tlr-radius">
+              </div>
+
+              <div class="card__content card__padding">
+                <div class="card__share">
+                  <div class="card__social">
+                    <a class="share-icon facebook" href="#"><span class="fa fa-facebook"></span></a>
+                    <a class="share-icon twitter" href="#"><span class="fa fa-twitter"></span></a>
+                    <a class="share-icon googleplus" href="#"><span class="fa fa-google-plus"></span></a>
+                  </div>
+
+                  <a id="share" class="share-toggle share-icon" href="#"></a>
+                </div>
+
+                <div class="card__meta">
+                  <a href="#">Web Design</a>
+                  <time>17th March</time>
+                </div>
+
+                <article class="card__article">
+                  <h5><a href="#">Material Design Card - For Blog Post Article</a></h5>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum...</p>
+                </article>
+              </div>
+
+              <div class="card__action">
+
+                <div class="card__author">
+                  <img src="http://lorempixel.com/40/40/sports/" alt="user">
+                  <div class="card__author-content">
+                    By <a href="#">John Doe</a>
+                  </div>
+                </div>
+              </div>
+
+
+              <p class="text-center">Created By <a href="https://twitter.com/mithicher">Mithicher Baro</a></p>
+            </div>
+
+            <div class="card radius shadowDepth1">
+              <div class="card__image border-tlr-radius">
+                <img src="http://lorempixel.com/400/200/sports/" alt="image" class="border-tlr-radius">
+              </div>
+
+              <div class="card__content card__padding">
+                <div class="card__share">
+                  <div class="card__social">
+                    <a class="share-icon facebook" href="#"><span class="fa fa-facebook"></span></a>
+                    <a class="share-icon twitter" href="#"><span class="fa fa-twitter"></span></a>
+                    <a class="share-icon googleplus" href="#"><span class="fa fa-google-plus"></span></a>
+                  </div>
+
+                  <a id="share" class="share-toggle share-icon" href="#"></a>
+                </div>
+
+                <div class="card__meta">
+                  <a href="#">Web Design</a>
+                  <time>17th March</time>
+                </div>
+
+                <article class="card__article">
+                  <h2><a href="#">Material Design Card - For Blog Post Article</a></h2>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum...</p>
+                </article>
+              </div>
+
+              <div class="card__action">
+
+                <div class="card__author">
+                  <img src="http://lorempixel.com/40/40/sports/" alt="user">
+                  <div class="card__author-content">
+                    By <a href="#">John Doe</a>
+                  </div>
+                </div>
+              </div>
+
+
+              <p class="text-center">Created By <a href="https://twitter.com/mithicher">Mithicher Baro</a></p>
+            </div>
+          </div>
+          <br>
+
+          <!-- Pagination -->
+          <ul class="pagination justify-content-center mb-4">
+            <li class="page-item">
+              <a class="page-link" href="#">&larr; Older</a>
+            </li>
+            <li class="page-item disabled">
+              <a class="page-link" href="#">Newer &rarr;</a>
+            </li>
+          </ul>
+
+        </div>
+
+        <!-- Sidebar Widgets Column -->
+        <div class="col-md-4">
+
+          <!-- Side Widget -->
+          <div class="card my-4">
+            <h5 class="card-header">Side Widget</h5>
+            <div class="card-body">
+              anything
+            </div>
+          </div>
+
+
+          <!-- More Articles -->
+          <div class="row">
+
+
+            <div class="blog-card alt">
+              <div class="photo photo2"></div>
+              <ul class="details">
+                <li class="author"><a href="#">Jane Doe</a></li>
+                <li class="date">July. 15, 2015</li>
+                <li class="tags">
+                  <ul>
+                    <li><a href="#">Learn</a></li>
+                    <li><a href="#">Code</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="description">
+                <h1>Mastering the Language</h1>
+                <h2>Java is not the same as JavaScript</h2>
+                <p class="summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. aliquam facilis numquam. Veritatis, sit.</p>
+                <a href="#">Read More</a>
+              </div>
+            </div>
+
+            <div class="blog-card">
+              <div class="photo photo1"></div>
+              <ul class="details">
+                <li class="author"><a href="#">John Doe</a></li>
+                <li class="date">Aug. 24, 2015</li>
+                <li class="tags">
+                  <ul>
+                    <li><a href="#">Learn</a></li>
+                    <li><a href="#">Code</a></li>
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="description">
+                <h4>Learning to Code</h4>
+                <h6>Opening a door to the future</h6>
+                <p class="summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+                <a href="#">Read More</a>
+              </div>
+            </div>
+
+            <div class="blog-card alt">
+              <div class="photo photo2"></div>
+              <ul class="details">
+                <li class="author"><a href="#">Jane Doe</a></li>
+                <li class="date">July. 15, 2015</li>
+                <li class="tags">
+                  <ul>
+                    <li><a href="#">Learn</a></li>
+                    <li><a href="#">Code</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="description">
+                <h1>Mastering the Language</h1>
+                <h2>Java is not the same as JavaScript</h2>
+                <p class="summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. aliquam facilis numquam. Veritatis, sit.</p>
+                <a href="#">Read More</a>
+              </div>
+
+              <div class="blog-card alt">
+                <div class="photo photo2"></div>
+                <ul class="details">
+                  <li class="author"><a href="#">Jane Doe</a></li>
+                  <li class="date">July. 15, 2015</li>
+                  <li class="tags">
+                    <ul>
+                      <li><a href="#">Learn</a></li>
+                      <li><a href="#">Code</a></li>
+                      <li><a href="#">JavaScript</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <div class="description">
+                  <h1>Mastering the Language</h1>
+                  <h2>Java is not the same as JavaScript</h2>
+                  <p class="summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. aliquam facilis numquam. Veritatis, sit.</p>
+                  <a href="#">Read More</a>
+                </div>
+              </div>
+            </div>
+
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+  </div>
+</div>
+
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{{ asset('main/vendor/jquery/jquery.min.js') }} "></script>
+    <script src="{{ asset('main/vendor/bootstrap/js/bootstrap.bundle.min.js') }} "></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="{{ asset('main/js/clean-blog.min.js') }} "></script>
+{% endblock %}
+

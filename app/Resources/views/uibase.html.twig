@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{{ asset('main/img/khomsa.jpg') }}">
+    <title>Glialomsa</title>
+    <!-- Bootstrap core CSS-->
+    <link href="{{ asset('ui/vendor/bootstrap/css/bootstrap.css') }}" rel="stylesheet">
+    <!-- Custom fonts for this template-->
+    <link href="{{ asset('ui/vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+    <!-- Page level plugin CSS-->
+    <link href="{{ asset('ui/vendor/datatables/dataTables.bootstrap4.css') }}" rel="stylesheet">
+    <!-- Custom styles for this template-->
+    <link href="{{ asset('ui/css/sb-admin.css') }}" rel="stylesheet">
+    <link href="{{ asset('ui/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('ui/css/news1-card.css') }}" rel="stylesheet" />
+    <link href="{{ asset('ui/css/news2-card.css') }}" rel="stylesheet" />
+    <link href="{{ asset('ui/css/survey.css') }}" rel="stylesheet" />
+    <link href="{{ asset('ui/css/rotating-card.css') }}" rel="stylesheet" />
+    <link href="{{ asset('ui/css/footer.css') }}" rel="stylesheet" />
+
+
+    </head>
+
+<body class="fixed-nav bg-dark" id="page-top">
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="http://glialomsa.com/">Glialomsa</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Business" id="business-nav-item">
+                <a class="nav-link" href="business">
+                    <i class="fa fa-fw fa-handshake-o"></i>
+                    <span class="nav-link-text">Business</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Sport" id="sport-nav-item">
+                <a class="nav-link" href="sport">
+                    <i class="fa fa-fw fa-dribbble"></i>
+                    <span class="nav-link-text">Sport</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Entertainment" id="entertainment-nav-item">
+                <a class="nav-link" href="entertainment">
+                    <i class="fa fa-fw fa-music"></i>
+                    <span class="nav-link-text">Entertainment</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Lifestyle" id="lifestyle-nav-item">
+                <a class="nav-link" href="lifestyle">
+                    <i class="fa fa-fw fa-diamond"></i>
+                    <span class="nav-link-text">LifeStyle</span>
+                </a>
+            </li>
+            <!--<li class="nav-item" data-toggle="tooltip" data-placement="right" title="People" id="people-nav-item">
+                <a class="nav-link" href="people">
+                    <i class="fa fa-fw fa-star"></i>
+                    <span class="nav-link-text">People</span>
+                </a>
+            </li>-->
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Science" id="science-nav-item">
+                <a class="nav-link" href="science">
+                    <i class="fa fa-fw fa-flask"></i>
+                    <span class="nav-link-text">Science</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="About" id="about-nav-item">
+                <a class="nav-link" href="about">
+                    <i class="fa fa-fw fa-info-circle"></i>
+                    <span class="nav-link-text">About</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Contact" id="contact-nav-item">
+                <a class="nav-link" href="contact">
+                    <i class="fa fa-fw fa-envelope-o"></i>
+                    <span class="nav-link-text">Contact</span>
+                </a>
+            </li>
+
+        </ul>
+        <ul class="navbar-nav sidenav-toggler">
+            <li class="nav-item">
+                <a class="nav-link text-center" id="sidenavToggler">
+                    <i class="fa fa-fw fa-angle-left"></i>
+                </a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+           <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-fw fa-envelope"></i>
+                    <span class="d-lg-none">Messages
+              <span class="badge badge-pill badge-primary">12 New</span>
+            </span>
+                    <span class="indicator text-primary d-none d-lg-block">
+              <i class="fa fa-fw fa-circle"></i>
+            </span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="messagesDropdown">
+                    <h6 class="dropdown-header">New Messages:</h6>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">
+                        <strong>David Miller</strong>
+                        <span class="small float-right text-muted">11:21 AM</span>
+                        <div class="dropdown-message small">Hey there! This new version of SB Admin is pretty awesome! These messages clip off when they reach the end of the box so they don't overflow over to the sides!</div>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">
+                        <strong>Jane Smith</strong>
+                        <span class="small float-right text-muted">11:21 AM</span>
+                        <div class="dropdown-message small">I was wondering if you could meet for an appointment at 3:00 instead of 4:00. Thanks!</div>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">
+                        <strong>John Doe</strong>
+                        <span class="small float-right text-muted">11:21 AM</span>
+                        <div class="dropdown-message small">I've sent the final files over to you for review. When you're able to sign off of them let me know and we can discuss distribution.</div>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item small" href="#">View all messages</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-fw fa-bell"></i>
+                    <span class="d-lg-none">Alerts
+              <span class="badge badge-pill badge-warning">6 New</span>
+            </span>
+                    <span class="indicator text-warning d-none d-lg-block">
+              <i class="fa fa-fw fa-circle"></i>
+            </span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="alertsDropdown">
+                    <h6 class="dropdown-header">New Alerts:</h6>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">
+              <span class="text-success">
+                <strong>
+                  <i class="fa fa-long-arrow-up fa-fw"></i>Status Update</strong>
+              </span>
+                        <span class="small float-right text-muted">11:21 AM</span>
+                        <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">
+              <span class="text-danger">
+                <strong>
+                  <i class="fa fa-long-arrow-down fa-fw"></i>Status Update</strong>
+              </span>
+                        <span class="small float-right text-muted">11:21 AM</span>
+                        <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">
+              <span class="text-success">
+                <strong>
+                  <i class="fa fa-long-arrow-up fa-fw"></i>Status Update</strong>
+              </span>
+                        <span class="small float-right text-muted">11:21 AM</span>
+                        <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item small" href="#">View all alerts</a>
+                </div>
+            </li>-->
+            <li class="nav-item">
+                <form class="form-inline my-2 my-lg-0 mr-lg-2" action="http://www.google.com/search"  method="get" target="_blank">
+                    <div class="input-group">
+                        <input class="form-control" type="text" name="q" placeholder="Search for...">
+                        <span class="input-group-btn">
+                <button class="btn btn-primary" type="button">
+                  <i class="fa fa-search"></i>
+                </button>
+              </span>
+                    </div>
+                </form>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+                    <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <a class="btn btn-primary" href="login">Logout</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<main role="main">
+    <div class="row">
+        <div class="col-md-12">
+            {% for flash_message in app.session.flashbag.get('notice') %}
+                <div class="alert alert-success"> {{flash_message}}</div>
+            {% endfor %}
+
+
+            {% for flash_message in app.session.flashbag.get('error') %}
+                <div class="alert alert-danger"> {{flash_message}}</div>
+            {% endfor %}
+            {% block body%}{% endblock %}
+
+<hr>
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-10 mx-auto">
+                            <ul class="list-inline text-center">
+                                <li class="list-inline-item">
+                                    <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                  </span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <p class="copyright text-muted">Copyright &copy; Glialomsa 2018</p>
+                        </div>
+                    </div>
+                </div>
+
+            </footer>
+            <!-- Scroll to Top Button-->
+            <a class="scroll-to-top rounded" href="#page-top">
+                <i class="fa fa-angle-up"></i>
+            </a>
+        </div>
+    </div>
+
+
+
+
+</main><!-- /.container -->
+
+<!-- Footer -->
+
+
+
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="{{ asset('ui/vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('ui/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="{{ asset('ui/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="{{ asset('ui/js/sb-admin.js') }}"></script>
+    <!-- Custom scripts for this page-->
+
+{% block javascripts %}
+{% endblock %}
+<!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a81ff222fcdb325"></script>
+</body>
+</html>

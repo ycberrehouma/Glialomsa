@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{{ asset('main/img/khomsa.jpg') }}">
+    <title>Glialomsa</title>
+    <!-- Bootstrap core CSS-->
+    <link href="{{ asset('ui/vendor/bootstrap/css/bootstrap.css') }}" rel="stylesheet">
+    <!-- Custom fonts for this template-->
+    <link href="{{ asset('ui/vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+    <!-- Page level plugin CSS-->
+    <link href="{{ asset('ui/vendor/datatables/dataTables.bootstrap4.css') }}" rel="stylesheet">
+    <!-- Custom styles for this template-->
+    <link href="{{ asset('ui/css/sb-admin.css') }}" rel="stylesheet">
+    <link href="{{ asset('ui/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('ui/css/password-form.css') }}" rel="stylesheet">
+
+
+
+    </head>
+
+<body class="bg-dark" style="background:url('{{ asset('main/img/main-pic.jpg') }}')no-repeat fixed center">
+<main role="main">
+    <div class="row">
+        <div class="col-md-12">
+            {% for flash_message in app.session.flashbag.get('notice') %}
+                <div class="alert alert-success"> {{flash_message}}</div>
+            {% endfor %}
+
+
+            {% for flash_message in app.session.flashbag.get('error') %}
+                <div class="alert alert-danger"> {{flash_message}}</div>
+            {% endfor %}
+            {% block body%}{% endblock %}
+
+
+            <footer>
+                <br>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-10 mx-auto">
+                            <ul class="list-inline text-center">
+                                <li class="list-inline-item">
+                                    <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                  </span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <p class="copyright text-muted" style="text-align: center;">Copyright &copy; Glialomsa 2018</p>
+                        </div>
+                    </div>
+                </div>
+
+            </footer>
+            <!-- Scroll to Top Button-->
+            <a class="scroll-to-top rounded" href="#page-top">
+                <i class="fa fa-angle-up"></i>
+            </a>
+        </div>
+    </div>
+
+
+
+
+</main><!-- /.container -->
+
+<!-- Footer -->
+
+
+
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="{{ asset('ui/vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('ui/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="{{ asset('ui/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="{{ asset('ui/js/sb-admin.js') }}"></script>
+    <!-- Custom scripts for this page-->
+
+    <!--Custom SCript for password validation-->
+    <script src="{{ asset('ui/js/password-form.js') }}"></script>
+
+
+
+{% block javascripts %}
+{% endblock %}
+
+</body>
+</html>
